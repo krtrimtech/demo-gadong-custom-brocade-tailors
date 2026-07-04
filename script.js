@@ -7,7 +7,7 @@
 // ============================================
 // 1. THREE.JS - 3D INTERACTIVE BACKGROUND
 // ============================================
-(function initHeroScene() {"
+(function initHeroScene() {
   const canvas = document.getElementById('heroCanvas');
   if (!canvas) return;
 
@@ -72,9 +72,9 @@
 
     const fabricGroup = new THREE.Group();
     const fabrics = [];
-    const colors = [0xa855f7, 0xeab308, 0xd946ef];
+    const customColors = [0xa855f7, 0xeab308, 0xd946ef];
     for (let i = 0; i < 8; i++) {
-      const fabric = createFabricLoop(colors[i % colors.length]);
+      const fabric = createFabricLoop(customColors[i % customColors.length]);
       fabric.position.set((Math.random() - 0.5) * 22, (Math.random() - 0.5) * 14, (Math.random() - 0.5) * 14 - 5);
       fabricGroup.add(fabric);
       fabrics.push({
